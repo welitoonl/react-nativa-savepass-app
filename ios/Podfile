@@ -6,8 +6,7 @@ require 'json'
 podfile_properties = JSON.parse(File.read('./Podfile.properties.json')) rescue {}
 
 platform :ios, podfile_properties['ios.deploymentTarget'] || '12.0'
-install! 'cocoapods',
-  :deterministic_uuids => false
+use_frameworks!
 
 target 'savepass' do
   use_expo_modules!
@@ -45,5 +44,9 @@ target 'savepass' do
       Pod::UI.warn e
     end
   end
+
+  pod 'AFNetworking', '~> 2.6'
+  pod 'ORStackView', '~> 3.0'
+  pod 'SwiftyJSON', '~> 2.3'
 
 end

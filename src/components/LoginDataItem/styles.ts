@@ -1,7 +1,5 @@
 import styled from 'styled-components/native';
-import { css } from 'styled-components';
 import Feather from '@expo/vector-icons/Feather';
-import { LinearGradient } from 'expo-linear-gradient';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`

@@ -25,14 +25,9 @@ export function LoginDataItem({
   password,
 }: Props) {
   const [passIsVisible, setPassIsVisible] = useState(false);
-  const [deletedItem, setDeletedItem] = useState(false);
 
   function handleTogglePassIsVisible() {
     setPassIsVisible(!passIsVisible);
-  }
-
-  function handleToggleDeleteItem() {
-    setDeletedItem(!deletedItem);
   }
 
   return (
@@ -60,14 +55,14 @@ export function LoginDataItem({
           </LoginData>
         )
       }
-      <DeleteButton
+      {/* <DeleteButton
         onPress={handleToggleDeleteItem}
       >
         <Icon
           name={'trash'}
           color={'red'}
         />
-      </DeleteButton>
+      </DeleteButton> */}
     </Container>
   );
 }
