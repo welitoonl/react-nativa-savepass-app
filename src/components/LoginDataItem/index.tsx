@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import {
   Container,
   ShowPasswordButton,
+  DeleteButton,
   Icon,
   PassData,
   Title,
@@ -21,29 +22,27 @@ interface Props {
 export function LoginDataItem({
   service_name,
   email,
-  password
+  password,
 }: Props) {
   const [passIsVisible, setPassIsVisible] = useState(false);
+  const [deletedItem, setDeletedItem] = useState(false);
 
   function handleTogglePassIsVisible() {
     setPassIsVisible(!passIsVisible);
   }
 
+  function handleToggleDeleteItem() {
+    setDeletedItem(!deletedItem);
+  }
+
   return (
-    <Container
-      colors={[
-        passIsVisible
-          ? '#EBF2FF'
-          : '#ffffff',
-        '#ffffff'
-      ]}
-    >
+    <Container>
       <ShowPasswordButton
         onPress={handleTogglePassIsVisible}
       >
         <Icon
           name={passIsVisible ? "eye" : "eye-off"}
-          color={passIsVisible ? '#1967FB' : '#888D97'}
+          color={passIsVisible ? '#6200ee' : '#888D97'}
         />
       </ShowPasswordButton>
 
@@ -61,6 +60,14 @@ export function LoginDataItem({
           </LoginData>
         )
       }
+      <DeleteButton
+        onPress={handleToggleDeleteItem}
+      >
+        <Icon
+          name={'trash'}
+          color={'red'}
+        />
+      </DeleteButton>
     </Container>
   );
 }

@@ -46,7 +46,10 @@ export function Input({
             />
             {secureTextEntry && (
               <ToggleShowPassButton onPress={() => setPasswordHidden(!passwordHidden)}>
-                <Icon name={passwordHidden ? "eye-off" : "eye"} />
+                <Icon
+                  name={passwordHidden ? "eye-off" : "eye"}
+                  color={passwordHidden ? '#888D97' : '#6200ee'}
+                />
               </ToggleShowPassButton>
             )}
           </InputContainer>

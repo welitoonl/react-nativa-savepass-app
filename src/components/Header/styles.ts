@@ -49,14 +49,14 @@ export const BoldText = styled.Text`
 `;
 
 export const SecondaryMessage = styled.Text`
-  font-size: ${RFValue(13)}px;
+  font-size: ${RFValue(11)}px;
   font-family: 'Rubik_300Light';
   color: #ffffff;
 `;
 
 export const AddButton = styled.Pressable`
   padding: ${RFValue(14.5)}px;
-  border: 1.5px #508bfc;
+  border: 1px #ffffff;
   border-radius: 4px;
 `;
 
@@ -71,6 +71,6 @@ export const BackButton = styled.Pressable`
 export const Title = styled.Text`
   font-size: ${RFValue(20)}px;
   font-family: 'Rubik_500Medium';
-  color: #3D434D;
+  color: #ffffff;
   margin: auto;
 `;

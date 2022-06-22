@@ -44,25 +44,24 @@ export function Header({ user }: HeaderProps) {
       style={{
         ...(user
           ? {
-            backgroundColor: '#1967FB'
+            backgroundColor: '#6200ee'
           }
           : {
-            backgroundColor: '#FFFFFF'
+            backgroundColor: '#38077d'
           })
       }}
     >
       {user ? (
         <>
           <AboutUser>
-            <Avatar source={{ uri: user.avatar_url }} />
 
             <TextContainer>
               <HelloMessage>
-                Olá, <BoldText>{user.name}</BoldText>
+                Falaa, <BoldText>{user.name}</BoldText>
               </HelloMessage>
 
               <SecondaryMessage>
-                Sinta-se seguro aqui
+                Nunca mais esqueça as suas senhas!
               </SecondaryMessage>
             </TextContainer>
           </AboutUser>
@@ -70,7 +69,7 @@ export function Header({ user }: HeaderProps) {
           <AddButton onPress={handleAddPass}>
             <Icon
               name="plus"
-              color="#FFFFFF"
+              color="#ffffff"
               size={24}
             />
           </AddButton>
@@ -80,12 +79,12 @@ export function Header({ user }: HeaderProps) {
           <BackButton onPress={goBack}>
             <Icon
               name="chevron-left"
-              color="#1967FB"
+              color="#ffffff"
               size={28}
             />
           </BackButton>
 
-          <Title>Cadastro de senha</Title>
+          <Title>Salvar uma Senha</Title>
         </>
       )}
     </Container>

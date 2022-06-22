@@ -1,27 +1,30 @@
 import styled from 'styled-components/native';
+import { css } from 'styled-components';
 import Feather from '@expo/vector-icons/Feather';
 import { LinearGradient } from 'expo-linear-gradient';
 import { RFValue } from 'react-native-responsive-fontsize';
 
-export const Container = styled(LinearGradient).attrs({
-  end: { x: 1, y: 0 }
-})`
-  border: 1px #e3e4e5;
+export const Container = styled.View`
   flex-direction: row;
   align-items: center;
   min-height: ${RFValue(80)}px;
   width: 100%;
   border-radius: 4px;
-  padding: 22px 20px;
   margin-bottom: 8px;
+  background-color: #ffffff;
 `;
 
 export const ShowPasswordButton = styled.TouchableOpacity``;
+
+export const DeleteButton = styled.TouchableOpacity`
+  margin-left: auto;
+`;
 
 export const Icon = styled(Feather).attrs({
   size: 24,
 })`
   margin-right: 20px;
+  margin-left: 20px;
   opacity: 0.6;
 `;
 
@@ -39,7 +42,7 @@ export const Title = styled.Text`
 export const Password = styled.Text`
   font-family: 'Rubik_500Medium';
   font-size: ${RFValue(15)}px;
-  color: #1967FB;
+  color: #6200ee;
 `;
 
 export const LoginData = styled.View`

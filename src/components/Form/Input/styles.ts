@@ -46,7 +46,6 @@ export const ToggleShowPassButton = styled.Pressable`
 
 export const Icon = styled(Feather).attrs({
   size: 24,
-  color: '#888D97'
 })`
   opacity: 0.6;
 `;
